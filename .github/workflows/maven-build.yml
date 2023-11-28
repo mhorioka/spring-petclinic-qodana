@@ -5,7 +5,7 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ main ]
+    branches: [ qodana ]
   pull_request:
     branches: [ main ]
 
@@ -26,4 +26,4 @@ jobs:
           distribution: 'adopt'
           cache: maven
       - name: Build with Maven Wrapper
-        run: ./mvnw -B package
+        run: ./mvnw -B verify
