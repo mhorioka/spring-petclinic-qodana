@@ -43,6 +43,6 @@ jobs:
       - name: 'Qodana Scan'
         uses: JetBrains/qodana-action@v2023.2
         with:
-          args: --property=project.open.type=Maven
+          args: --property=project.open.type=Maven --baseline,.github/qodana/qodana.sarif.json
         env:
           QODANA_TOKEN: ${{ secrets.QODANA_TOKEN }}
