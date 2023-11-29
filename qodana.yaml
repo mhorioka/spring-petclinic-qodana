@@ -25,3 +25,6 @@ linter: jetbrains/qodana-jvm:latest
 include:
   - name: ClassComplexity
   - name: CheckDependencyLicenses
+plugins:
+  - id: com.intellij.ja
+
