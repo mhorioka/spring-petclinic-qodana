@@ -1,0 +1,20 @@
+#-------------------------------------------------------------------------------#
+#               Qodana analysis is configured by qodana.yaml file               #
+#             https://www.jetbrains.com/help/qodana/qodana-yaml.html            #
+#-------------------------------------------------------------------------------#
+version: "1.0"
+#Specify inspection profile for code analysis
+profile:
+  name: qodana.recommended
+projectJDK: 17 #(Applied in CI/CD pipeline)
+#bootstrap: sh ./prepare-qodana.sh
+plugins:
+  - id: com.intellij.ja
+linter: jetbrains/qodana-jvm:latest
+include:
+  - name: ClassComplexity
+  - name: CheckDependencyLicenses
+#exclude:
+#  - name: <SomeDisabledInspectionId>
+#    paths:
+#      - <path/where/not/run/inspection>
